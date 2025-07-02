@@ -1,9 +1,10 @@
+import { TABS } from "../data";
 import TabButton from "./TabButton";
 
 const TabButtons = ({ selectedTopic, handleSelect }) => {
   return (
     <menu className="my-4 p-0 flex gap-2 list-none">
-      <TabButton
+      {/* <TabButton
         isSelected={selectedTopic === "components"}
         onSelect={() => handleSelect("components")}
       >
@@ -26,7 +27,16 @@ const TabButtons = ({ selectedTopic, handleSelect }) => {
         onSelect={() => handleSelect("state")}
       >
         State
-      </TabButton>
+      </TabButton> */}
+      {TABS.map((topic) => (
+        <TabButton
+          key={topic}
+          isSelected={selectedTopic === topic}
+          onSelect={() => handleSelect(topic)}
+        >
+          {topic.charAt(0).toUpperCase() + topic.slice(1)}
+        </TabButton>
+      ))}
     </menu>
   );
 };
