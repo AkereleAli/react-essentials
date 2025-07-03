@@ -32,7 +32,7 @@ const TabButtons = ({ selectedTopic, handleSelect }) => {
         <TabButton
           key={topic}
           isSelected={selectedTopic === topic}
-          onSelect={() => handleSelect(topic)}
+          onClick={() => handleSelect(topic)}
         >
           {topic.charAt(0).toUpperCase() + topic.slice(1)}
         </TabButton>
