@@ -3,7 +3,7 @@ import TabButton from "./TabButton";
 
 const TabButtons = ({ selectedTopic, handleSelect }) => {
   return (
-    <menu className="my-4 p-0 flex gap-2 list-none">
+    <menu className="my-4 p-0 flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 list-none px-2 sm:px-4 md:px-6">
       {/* <TabButton
         isSelected={selectedTopic === "components"}
         onSelect={() => handleSelect("components")}
